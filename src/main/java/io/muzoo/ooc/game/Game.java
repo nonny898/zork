@@ -1,4 +1,4 @@
-package io.muzoo.ooc.Game;
+package io.muzoo.ooc.game;
 
 import io.muzoo.ooc.command.Command;
 import io.muzoo.ooc.command.CommandFactory;

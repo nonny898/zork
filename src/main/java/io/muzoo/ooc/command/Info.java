@@ -1,7 +1,7 @@
 package io.muzoo.ooc.command;
 
-import io.muzoo.ooc.Game.Game;
-import io.muzoo.ooc.Game.Player;
+import io.muzoo.ooc.game.Game;
+import io.muzoo.ooc.game.Player;
 
 public class Info implements  Command{
         public void run(String[] commands, Game game) {

@@ -1,4 +1,4 @@
-package io.muzoo.ooc.Game;
+package io.muzoo.ooc.game;
 
 public class Player {
 

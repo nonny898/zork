@@ -1,4 +1,4 @@
-import io.muzoo.ooc.Game.Game;
+import io.muzoo.ooc.game.Game;
 
 public class Application {
         public static void main(String[] args) {
