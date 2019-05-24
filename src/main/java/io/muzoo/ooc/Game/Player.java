@@ -9,6 +9,7 @@ public class Player {
         public Player(){
                 this.HP = 10;
                 this.ATK = 10;
+                this.FULL_HP = 10;
         }
 
         public int getHP() {
