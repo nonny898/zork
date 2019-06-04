@@ -7,36 +7,36 @@ public class Walk implements  Command {
         public void run(String[] commands, Game game) {
                 Map map = game.getLevel().getMap();
 
-                if (commands[0].equals("right") && map.goRight(game)) {
+                if (commands[1].equals("right") && map.goRight(game)) {
                         if ((map.getCurrentX() + 1) == map.getMaxX()) {
-                                System.out.println("\nThere's a wall on your right.\n");
+                                System.out.println("There's a wall on your right.");
                         } else {
                                 map.setCurrentX(map.getCurrentX() + 1);
-                                System.out.println("\nYou are in the next room.\n");
+                                System.out.println("You are in the next room.");
                         }
-                } else if (commands[0].equals("left") && map.goLeft(game)) {
+                } else if (commands[1].equals("left") && map.goLeft(game)) {
                         if ((map.getCurrentX() - 1) < 0) {
-                                System.out.println("\nThere's a wall on your left.\n");
+                                System.out.println("There's a wall on your left.");
                         } else {
                                 map.setCurrentX(map.getCurrentX() - 1);
-                                System.out.println("\nYou are in the next room.\n");
+                                System.out.println("You are in the next room.");
                         }
-                } else if (commands[0].equals("forward") && map.goUp(game)) {
+                } else if (commands[1].equals("forward") && map.goUp(game)) {
                         if ((map.getCurrentY() + 1) == map.getMaxY()) {
-                                System.out.println("\nThere's a wall on your front.\n");
+                                System.out.println("There's a wall on your front.");
                         } else {
                                 map.setCurrentY(map.getCurrentY() + 1);
-                                System.out.println("\nYou are in the next room.\n");
+                                System.out.println("You are in the next room.");
                         }
-                } else if (commands[0].equals("backward") && map.goDown(game)) {
-                        if ((map.getCurrentY() - 1) == 0) {
-                                System.out.println("\nThere's a wall on your back.\n");
+                } else if (commands[1].equals("backward") && map.goDown(game)) {
+                        if ((map.getCurrentY() - 1) < 0) {
+                                System.out.println("There's a wall on your back.");
                         } else {
                                 map.setCurrentY(map.getCurrentY() - 1);
-                                System.out.println("\nYou are in the next room.\n");
+                                System.out.println("You are in the next room.");
                         }
                 } else {
-                        System.out.println("\nYou are in the same room.\n");
+                        System.out.println("You are in the same room.");
                 }
         }
 }

@@ -12,8 +12,8 @@ public class Player {
         private int ATK;
         private Map<String, Weapon> inventory = new HashMap<String, Weapon>();
 
-        public Player(){
-              this.HP = 10;
+        public Player() {
+                this.HP = 10;
                 this.ATK = 10;
                 this.FULL_HP = 10;
 
@@ -44,7 +44,17 @@ public class Player {
         }
 
         public void takeWeapon(Weapon weapon) {
-                System.out.println("\nYou picked up " + weapon.getName() + "\n");
-                inventory.put(weapon.getName(), weapon);
+                System.out.println("You picked up " + weapon.getName());
+                inventory.put(weapon.getName().toLowerCase(), weapon);
+        }
+
+        public void dropWeapon(String weaponName, Game game) {
+                if (inventory.containsKey(weaponName.toLowerCase())) {
+                        System.out.println("You drop " + weaponName);
+                        game.getLevel().getMap().getCurrentRoom().weapoenDrop(inventory.get(weaponName.toLowerCase()));
+                        inventory.remove(weaponName.toLowerCase());
+                } else {
+                        System.out.printf("You do not have this %s weapon to drop.\n", weaponName);
+                }
         }
 }

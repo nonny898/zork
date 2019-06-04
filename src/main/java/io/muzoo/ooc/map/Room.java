@@ -32,4 +32,8 @@ public class Room {
         public void setWeaponTaken() {
                 this.weapon = null;
         }
+
+        public void weapoenDrop(Weapon weapon) {
+                this.weapon = weapon;
+        }
 }

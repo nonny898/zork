@@ -13,27 +13,29 @@ public class Info implements  Command{
                 System.out.printf("Player Information: \n" +
                         "Current HP = %d\n" +
                         "Max HP     = %d\n" +
-                        "Attack     = %d\n",
-                        player.getHP(),player.getFULL_HP(),player.getATK());
+                        "Attack     = %d\n" +
+                        "Position   = (%d,%d)\n",
+                        player.getHP(),player.getFULL_HP(),player.getATK(),
+                        game.getLevel().getMap().getCurrentX(),game.getLevel().getMap().getCurrentY());
 
                 if (monster == null) {
-                        System.out.println("No monster in this here.");
+                        System.out.println("No monster here.");
                 } else {
-                        System.out.println(monster.getName());
-                        System.out.println(monster.getDescription());
-                        System.out.printf("Monster current HP: %d\n" +
+                        System.out.printf("There's a %s here.\n" +
+                                        "Monster current HP: %d\n" +
                                         "Monster max HP: %d\n" +
                                         "Monster attack power: %d\n",
+                                monster.getName(),
                                 monster.getHP(),
                                 monster.getFULL_HP(),
                                 monster.getATK());
                 }
 
                 if (weapon == null) {
-                        System.out.println("No weapon in this here\n");
+                        System.out.println("No weapon here.");
                 } else {
                         System.out.printf("Weapon name : %s\n" +
-                                        "Weapon attack power: %d\n\n",
+                                        "Weapon attack power: %d\n",
                                 weapon.getName(),
                                 weapon.getPower());
                 }
