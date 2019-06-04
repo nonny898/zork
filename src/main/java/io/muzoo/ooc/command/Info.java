@@ -17,7 +17,7 @@ public class Info implements  Command{
                         player.getHP(),player.getFULL_HP(),player.getATK());
 
                 if (monster == null) {
-                        System.out.println("No monster in this room.");
+                        System.out.println("No monster in this here.");
                 } else {
                         System.out.println(monster.getName());
                         System.out.println(monster.getDescription());
@@ -30,7 +30,7 @@ public class Info implements  Command{
                 }
 
                 if (weapon == null) {
-                        System.out.println("No weapon in this room\n");
+                        System.out.println("No weapon in this here\n");
                 } else {
                         System.out.printf("Weapon name : %s\n" +
                                         "Weapon attack power: %d\n\n",

@@ -25,6 +25,10 @@ public class Room {
                 this.monster = null;
         }
 
+        public boolean isMonsterDead(Monster monster) {
+                return this.monster == null;
+        }
+
         public void takeWeapon(Weapon weapon) {
                 this.weapon = null;
         }
