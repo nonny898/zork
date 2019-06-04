@@ -2,9 +2,9 @@ package io.muzoo.ooc.monster;
 
 public class Underlord extends Monster {
         public Underlord() {
-                setName("Spectre");
+                setName("Underlord");
                 setATK(5);
-                setHP(50);
-                setFULL_HP(50);
+                setHP(1);
+                setFULL_HP(1);
         }
 }

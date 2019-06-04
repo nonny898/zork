@@ -41,10 +41,6 @@ public class Player {
                 inventory.put(weapon.getName().toLowerCase(), weapon);
         }
 
-        public int getAttackPowerWithWeapon(String weaponName) {
-                return getWeapon(weaponName).getPower();
-        }
-
         public Weapon getWeapon(String weaponName) {
                 if (inventory.containsKey(weaponName.toLowerCase())) {
                         return inventory.get(weaponName.toLowerCase());
@@ -60,6 +56,7 @@ public class Player {
                         System.out.println("You drop " + weaponName);
                         game.getLevel().getMap().getCurrentRoom().weaponDrop(inventory.get(weaponName.toLowerCase()));
                         inventory.remove(weaponName.toLowerCase());
+                        setCurrentWeapon(inventory.get("fist"));
                 } else {
                         System.out.printf("You do not have this %s weapon to drop.\n", weaponName);
                 }
@@ -71,5 +68,6 @@ public class Player {
 
         public void setCurrentWeapon(Weapon currentWeapon) {
                 this.currentWeapon = currentWeapon;
+                System.out.println("You're using: " + currentWeapon.getName());
         }
 }

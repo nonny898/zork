@@ -11,7 +11,5 @@ public class LevelA extends  Map {
                         {new Room(MonsterFactory.getMonster(), null), new Room(null, null)}
                 };
                 setRooms(rooms);
-                setOutX(0);
-                setOutY(1);
         }
 }

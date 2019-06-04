@@ -22,7 +22,7 @@ public class Level {
 
         public void goToNextLevel(Game game) throws IllegalAccessException, InstantiationException {
                 if (maxLevel == currentLevel) {
-                        game.setWon(true);
+                        game.setWon();
                 } else {
                         currentLevel++;
                         currentMap = levels.get(currentLevel).newInstance();

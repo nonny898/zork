@@ -5,12 +5,8 @@ import io.muzoo.ooc.game.Game;
 public abstract  class Map {
         private int currentX = 0;
         private int currentY = 0;
-
         private int maxX = 2;
-
         private int maxY = 2;
-        private int outX;
-        private int outY;
         private Room[][] rooms = new Room[maxX][maxY];
 
         public int getCurrentX() {
@@ -35,22 +31,6 @@ public abstract  class Map {
 
         public int getMaxY() {
                 return maxY;
-        }
-
-        public int getOutX() {
-                return outX;
-        }
-
-        public void setOutX(int outX) {
-                this.outX = outX;
-        }
-
-        public int getOutY() {
-                return outY;
-        }
-
-        public void setOutY(int outY) {
-                this.outY = outY;
         }
 
         public  void setRooms(Room[][] rooms) {

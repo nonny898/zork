@@ -13,14 +13,14 @@ public class Game {
         private Level level = new Level();
 
 
-        public void setLose(boolean lose) {
+        public void setLose() {
                 System.out.println("You lost.");
-                this.exit = lose;
+                System.exit(0);
         }
 
-        public void setWon(boolean won) {
+        public void setWon() {
                 System.out.println("You won.");
-                this.exit = won;
+                System.exit(0);
         }
 
         public Player getPlayer() {

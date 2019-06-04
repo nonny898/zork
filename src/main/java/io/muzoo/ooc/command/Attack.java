@@ -12,20 +12,23 @@ public class Attack implements  Command {
                 Player player = game.getPlayer();
                 Map map = game.getLevel().getMap();
                 Level level = game.getLevel();
-
-                monster.setHP(monster.getHP() - player.getCurrentWeapon().getPower());
-                player.setHP(player.getHP() - monster.getATK());
-                if (monster.getHP() <= 0) {
-                        player.setHP(monster.getFULL_HP() + player.getFULL_HP());
-                        player.setFULL_HP(monster.getFULL_HP() + player.getFULL_HP());
-                        game.getLevel().getMap().getCurrentRoom().setMonsterDead();
-                        if (map.checkIfMapClear()) {
-                                level.goToNextLevel(game);
-                                System.out.println("\nYou are on the next level.");
+                if (monster != null) {
+                        monster.setHP(monster.getHP() - player.getCurrentWeapon().getPower());
+                        player.setHP(player.getHP() - monster.getATK());
+                        if (monster.getHP() <= 0) {
+                                player.setHP(monster.getFULL_HP() + player.getFULL_HP());
+                                player.setFULL_HP(monster.getFULL_HP() + player.getFULL_HP());
+                                game.getLevel().getMap().getCurrentRoom().setMonsterDead();
+                                if (map.checkIfMapClear()) {
+                                        level.goToNextLevel(game);
+                                        System.out.println("You are on the next level.");
+                                }
                         }
-                }
-                if (player.getHP() <= 0) {
-                        game.setLose(true);
+                        if (player.getHP() <= 0) {
+                                game.setLose();
+                        }
+                } else {
+                        System.out.println("There are no monsters around.");
                 }
         }
 }
