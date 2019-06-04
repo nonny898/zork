@@ -11,6 +11,7 @@ public class CommandFactory {
                 put("info", new Info());
                 put("take", new Take());
                 put("walk", new Walk());
+                put("use", new Use());
         }};
 
         public static Command getCommand(String commandName) {
