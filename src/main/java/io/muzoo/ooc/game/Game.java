@@ -2,6 +2,7 @@ package io.muzoo.ooc.game;
 
 import io.muzoo.ooc.command.Command;
 import io.muzoo.ooc.command.CommandFactory;
+import io.muzoo.ooc.map.Level;
 
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class Game {
 
         private boolean exit =false;
         private Player player = new Player();
+        private Level level = new Level();
 
 
         public void setLose(boolean lose) {
@@ -23,6 +25,10 @@ public class Game {
 
         public Player getPlayer() {
                 return player;
+        }
+
+        public Level getLevel() {
+                return level;
         }
 
         public void begin() {
