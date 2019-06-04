@@ -77,7 +77,7 @@ public abstract  class Map {
                 return rooms[currentX][currentY];
         }
 
-        public boolean checkIfMapClear(int x, int y) {
-                return this.currentX == x && this.currentY == y;
+        public boolean checkIfMapClear() {
+                return getCurrentRoom().isMonsterDead();
         }
 }

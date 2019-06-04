@@ -21,11 +21,11 @@ public class Room {
                 return weapon;
         }
 
-        public void setMonsterDead(Monster monster) {
+        public void setMonsterDead() {
                 this.monster = null;
         }
 
-        public boolean isMonsterDead(Monster monster) {
+        public boolean isMonsterDead() {
                 return this.monster == null;
         }
 
@@ -33,7 +33,7 @@ public class Room {
                 this.weapon = null;
         }
 
-        public void weapoenDrop(Weapon weapon) {
+        public void weaponDrop(Weapon weapon) {
                 this.weapon = weapon;
         }
 }

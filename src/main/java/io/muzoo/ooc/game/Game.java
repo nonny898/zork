@@ -31,7 +31,7 @@ public class Game {
                 return level;
         }
 
-        public void begin() {
+        public void begin() throws IllegalAccessException, InstantiationException {
                 System.out.println("Welcome and good luck.");
                 Scanner scanner = new Scanner(System.in);
                 while (!exit) {

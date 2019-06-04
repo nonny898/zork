@@ -15,7 +15,7 @@ public class Info implements  Command{
                         "Max HP     = %d\n" +
                         "Attack     = %d\n" +
                         "Position   = (%d,%d)\n",
-                        player.getHP(),player.getFULL_HP(),player.getATK(),
+                        player.getHP(),player.getFULL_HP(),player.getCurrentWeapon().getPower(),
                         game.getLevel().getMap().getCurrentX(),game.getLevel().getMap().getCurrentY());
 
                 if (monster == null) {
