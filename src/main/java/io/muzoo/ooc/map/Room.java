@@ -29,7 +29,7 @@ public class Room {
                 return this.monster == null;
         }
 
-        public void takeWeapon(Weapon weapon) {
+        public void setWeaponTaken() {
                 this.weapon = null;
         }
 }
